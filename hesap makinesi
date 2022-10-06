@@ -1,0 +1,43 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        int s1,s2,secim,toplam;
+
+        Scanner girdi = new Scanner(System.in);
+        System.out.println("lütfen işlem yapmak istediğiniz 2 sayıyı giriniz.");
+        s1=girdi.nextInt();
+        s2=girdi.nextInt();
+        System.out.println("lütfen yapmak istediğiniz işlemi seçiniz \n 1-toplama \n 2-çıkarma\n3-çarpma\n4-bölme");
+        secim=girdi.nextInt();
+
+        if (secim==1){
+
+            toplam=s1+s2;
+            System.out.println("işlem sonucu"+toplam);
+        } else if (secim==2) {
+
+            toplam=s1-s2;
+            System.out.println("işlem sonucu"+toplam);
+
+        } else if (secim==3) {
+
+            toplam=s1*s2;
+            System.out.println("işlem sonucu"+toplam);
+
+        } else if (secim==4) {
+
+            if (s1==0){
+                System.out.println("sıfıra bölünme yapılamaz");
+            } else if (s2==0) {
+
+                System.out.println("sıfıra bölünme yapıalamaz.");
+
+            }
+            else{
+                System.out.println("işlem sonucu"+s1/s2);
+            }
+
+        }
+    }
+}
